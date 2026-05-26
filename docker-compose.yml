@@ -1,0 +1,17 @@
+services:
+  alpine-ttypd-nmap-sslyze-hl:
+    build: .
+    image: hackinglab/alpine-ttyd-nmap-sslyze-hl:3.2
+    restart: always
+    environment:
+    - AUTHOR=e1
+    - HL_USER_USERNAME=root
+    - HL_USER_PASSWORD=compass
+    - HL_ROOT_PASSWORD=compass
+    - GOLDNUGGET=flag
+    ports:
+      - 7681:7681
+    volumes:
+      - /:/tmp
+
+
